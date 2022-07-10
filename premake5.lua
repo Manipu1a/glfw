@@ -15,7 +15,16 @@ project "GLFW"
 		"src/input.c",
 		"src/monitor.c",
 		"src/vulkan.c",
-		"src/window.c"
+		"src/window.c",
+		"src/platform.c",
+		"src/internal.h",
+		"src/null_platform.h",
+		"src/null_init.c",
+		"src/null_monitor.c",
+		"src/null_window.c",
+		"src/null_joystick.c",
+		"src/null_joystick.h",
+
 	}
 	filter "system:linux"
 		pic "On"
@@ -54,6 +63,7 @@ project "GLFW"
 			"src/win32_time.c",
 			"src/win32_thread.c",
 			"src/win32_window.c",
+			"src/win32_module.c",
 			"src/wgl_context.c",
 			"src/egl_context.c",
 			"src/osmesa_context.c"
